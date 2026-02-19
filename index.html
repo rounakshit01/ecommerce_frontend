@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Luxe Store — Considered objects for considered people. Artisan homeware, lighting, fashion, and stationery.">
+  <title>LUXE — Considered Objects</title>
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Preconnect for fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<body>
+
+<!-- ============================================================
+     TOAST CONTAINER
+     ============================================================ -->
+<div class="toast-container" aria-live="polite" aria-label="Notifications"></div>
+
+<!-- ============================================================
+     NAVIGATION
+     ============================================================ -->
+<nav id="navbar" role="navigation" aria-label="Main navigation">
+  <div class="nav-inner">
+    <!-- Logo -->
+    <div class="nav-logo" data-page="home" role="link" tabindex="0" aria-label="Luxe Store home">
+      LUXE<span>.</span>
+    </div>
+
+    <!-- Desktop nav links -->
+    <div class="nav-links" role="menubar">
+      <button class="nav-link active" data-page="home" role="menuitem">Home</button>
+      <button class="nav-link" data-page="shop" role="menuitem">Collection</button>
+      <button class="nav-link" data-page="cart" role="menuitem">Cart</button>
+      <button class="nav-link" data-page="login" role="menuitem">Account</button>
+    </div>
+
+    <!-- Actions -->
+    <div class="nav-actions">
+      <!-- Search (mobile/desktop toggle future) -->
+      <button class="nav-icon-btn" aria-label="Search" data-page="shop">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="11" cy="11" r="8"/>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+        </svg>
+      </button>
+
+      <!-- Wishlist -->
+      <button class="nav-icon-btn" aria-label="Wishlist">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+        </svg>
+      </button>
+
+      <!-- Cart -->
+      <button class="nav-icon-btn nav-cart-btn" aria-label="Shopping cart">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <path d="M16 10a4 4 0 01-8 0"/>
+        </svg>
+        <span class="cart-badge" aria-label="Cart items count">0</span>
+      </button>
+
+      <!-- Hamburger (mobile) -->
+      <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" role="dialog" aria-label="Mobile navigation">
+  <button class="nav-link" data-page="home">Home</button>
+  <button class="nav-link" data-page="shop">Collection</button>
+  <button class="nav-link" data-page="cart">Cart</button>
+  <button class="nav-link" data-page="login">Account</button>
+</div>
+
+<!-- ============================================================
+     HOME PAGE
+     ============================================================ -->
+<main id="page-home" class="page active" role="main">
+
+  <!-- HERO -->
+  <section class="hero" aria-label="Hero section">
+    <div class="hero-content fade-in-up">
+      <div class="hero-eyebrow" aria-hidden="true">New Collection 2026</div>
+      <h1 class="hero-headline">
+        Objects with<br>
+        <em>a long life</em><br>
+        ahead of them.
+      </h1>
+      <p class="hero-body delay-2 fade-in-up">
+        We select handcrafted objects made by people who care too much — in the best possible way.
+        Each piece is chosen to be used, worn, and passed on.
+      </p>
+      <div class="hero-actions fade-in-up delay-3">
+        <button class="btn btn-primary btn-lg" data-page="shop">Explore Collection</button>
+        <button class="btn btn-outline btn-lg" data-page="shop">Our Story</button>
+      </div>
+    </div>
+
+    <div class="hero-image-wrap">
+      <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=1200&q=85"
+           alt="Curated homeware objects" loading="eager">
+      <div class="hero-image-overlay" aria-hidden="true"></div>
+    </div>
+
+    <div class="hero-scroll" aria-hidden="true">
+      <div class="scroll-line"></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- TICKER -->
+  <div class="marquee-section" aria-hidden="true">
+    <div class="marquee-track">
+      <!-- Duplicated for infinite scroll -->
+      <span>Free shipping over $150</span><span class="sep">·</span>
+      <span>Handcrafted with intention</span><span class="sep">·</span>
+      <span>30-day returns</span><span class="sep">·</span>
+      <span>Ethically sourced</span><span class="sep">·</span>
+      <span>New arrivals weekly</span><span class="sep">·</span>
+      <span>Made to last generations</span><span class="sep">·</span>
+      <span>Free shipping over $150</span><span class="sep">·</span>
+      <span>Handcrafted with intention</span><span class="sep">·</span>
+      <span>30-day returns</span><span class="sep">·</span>
+      <span>Ethically sourced</span><span class="sep">·</span>
+      <span>New arrivals weekly</span><span class="sep">·</span>
+      <span>Made to last generations</span><span class="sep">·</span>
+    </div>
+  </div>
+
+  <!-- FEATURED PRODUCTS -->
+  <section class="section" aria-labelledby="featured-title">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-header-left">
+          <div class="section-label">Carefully Chosen</div>
+          <h2 class="section-title reveal" id="featured-title">
+            The considered<br>selection
+          </h2>
+        </div>
+        <button class="btn btn-outline reveal delay-2" data-page="shop">View All Objects</button>
+      </div>
+      <div class="product-grid" id="featured-grid">
+        <!-- Rendered by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- CATEGORIES -->
+  <section class="categories-section" aria-labelledby="categories-title">
+    <div class="container">
+      <div class="section-label" style="color:var(--gold-light)">
+        <span style="background:var(--gold-light);width:24px;height:1px;display:inline-block;"></span>
+        Browse by World
+      </div>
+      <h2 class="section-title reveal" id="categories-title" style="color:var(--parchment);margin-bottom:var(--space-10)">
+        Every corner<br>of your life.
+      </h2>
+    </div>
+    <div class="categories-grid">
+      <div class="category-card reveal" data-cat="home" role="button" tabindex="0" aria-label="Browse Home category">
+        <img src="https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?w=800&q=80" alt="Home objects" loading="lazy">
+        <div class="category-card-content">
+          <div class="category-card-name">Home</div>
+          <div class="category-card-count">4 objects</div>
+          <button class="btn btn-ghost btn-sm">Explore →</button>
+        </div>
+      </div>
+      <div class="category-card reveal delay-2" data-cat="kitchen" role="button" tabindex="0" aria-label="Browse Kitchen category">
+        <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&q=80" alt="Kitchen objects" loading="lazy">
+        <div class="category-card-content">
+          <div class="category-card-name">Kitchen</div>
+          <div class="category-card-count">3 objects</div>
+          <button class="btn btn-ghost btn-sm">Explore →</button>
+        </div>
+      </div>
+      <div class="category-card reveal delay-3" data-cat="fashion" role="button" tabindex="0" aria-label="Browse Fashion category">
+        <img src="https://images.unsplash.com/photo-1434389677669-e08b4cac3105?w=800&q=80" alt="Fashion pieces" loading="lazy">
+        <div class="category-card-content">
+          <div class="category-card-name">Fashion</div>
+          <div class="category-card-count">2 objects</div>
+          <button class="btn btn-ghost btn-sm">Explore →</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDITORIAL STRIP — Philosophy -->
+  <section class="section" style="background:var(--parchment-dark)">
+    <div class="container">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--space-16);align-items:center;">
+        <div class="reveal">
+          <div class="section-label">The Luxe Philosophy</div>
+          <h2 class="section-title">
+            We don't sell<br>
+            <em style="font-style:italic;color:var(--gold);">things.</em><br>
+            We sell time.
+          </h2>
+          <p style="font-size:var(--text-md);font-weight:300;color:var(--ink-80);line-height:1.8;margin-bottom:var(--space-6);max-width:400px;">
+            Every object in our collection was chosen for its ability to improve with age.
+            Not just maintain — actually get better. That's the real return on a considered purchase.
+          </p>
+          <button class="btn btn-outline" data-page="shop">Read Our Manifesto</button>
+        </div>
+        <div class="reveal delay-2" style="position:relative;">
+          <img src="https://images.unsplash.com/photo-1615485290382-441e4d049cb5?w=700&q=80"
+               alt="Artisan craftsmanship"
+               style="width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:var(--radius-lg);"
+               loading="lazy">
+          <div style="
+            position:absolute;
+            bottom:var(--space-6);
+            left:calc(-1 * var(--space-8));
+            background:var(--ink);
+            color:var(--parchment);
+            padding:var(--space-5) var(--space-6);
+            border-radius:var(--radius);
+            max-width:220px;
+            box-shadow:var(--shadow-lg);">
+            <div style="font-family:var(--font-display);font-size:var(--text-3xl);font-weight:300;color:var(--gold);">97%</div>
+            <div style="font-size:var(--text-xs);letter-spacing:0.12em;text-transform:uppercase;color:rgba(245,240,232,0.6);margin-top:4px;">of customers recommend</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="section testimonials-section" aria-labelledby="testimonials-title">
+    <div class="container">
+      <div class="section-label" style="justify-content:center">
+        <span></span>What people say
+      </div>
+      <h2 class="section-title text-center reveal" id="testimonials-title" style="margin-bottom:var(--space-12)">
+        Words from the people<br>who live with our objects.
+      </h2>
+      <div class="testimonial-grid">
+        <!-- Rendered statically for home page -->
+        <div class="testimonial-card reveal">
+          <p class="testimonial-text">
+            "The Obsidian Vase arrived wrapped in tissue paper, nested in a hand-stamped box. Before I'd even seen the object, the experience had already begun."
+          </p>
+          <div class="testimonial-author">
+            <div>
+              <div class="testimonial-name">Marina K.</div>
+              <div class="testimonial-location">Stockholm</div>
+            </div>
+            <div class="testimonial-product">Obsidian Ceramic Vase</div>
+          </div>
+        </div>
+        <div class="testimonial-card reveal delay-2">
+          <p class="testimonial-text">
+            "I've bought cheaper cardigans that felt fine. This one makes me feel like someone who has figured something out. The weight of the wool, the way it moves."
+          </p>
+          <div class="testimonial-author">
+            <div>
+              <div class="testimonial-name">James O.</div>
+              <div class="testimonial-location">London</div>
+            </div>
+            <div class="testimonial-product">Merino Wool Cardigan</div>
+          </div>
+        </div>
+        <div class="testimonial-card reveal delay-3">
+          <p class="testimonial-text">
+            "The leather journal has been with me for eight months and it has transformed into something I didn't buy. The patina, the slight swell of the pages."
+          </p>
+          <div class="testimonial-author">
+            <div>
+              <div class="testimonial-name">Cécile D.</div>
+              <div class="testimonial-location">Paris</div>
+            </div>
+            <div class="testimonial-product">Leather Journal</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER -->
+  <section class="newsletter-section" aria-labelledby="newsletter-title">
+    <div class="container-narrow">
+      <div class="section-label">Stay Informed</div>
+      <h2 class="section-title reveal" id="newsletter-title">
+        New objects, slow letters,<br>occasional beauty.
+      </h2>
+      <p class="newsletter-body reveal delay-1">
+        We write infrequently, and only when we have something worth saying. No noise.
+      </p>
+      <form class="newsletter-form reveal delay-2" role="form" aria-label="Newsletter subscription">
+        <label class="sr-only" for="newsletter-email">Email address</label>
+        <input type="email" class="newsletter-input" id="newsletter-email"
+               placeholder="your@email.com" autocomplete="email" required>
+        <button type="submit" class="btn btn-gold">Subscribe</button>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============================================================
+     SHOP PAGE
+     ============================================================ -->
+<div id="page-shop" class="page" role="main">
+  <div class="container">
+    <!-- Page Header -->
+    <div style="padding:var(--space-8) 0 0;border-bottom:1px solid var(--ink-10);margin-bottom:var(--space-8);">
+      <div class="section-label">12 Objects</div>
+      <h1 class="section-title" style="font-size:clamp(2rem,5vw,var(--text-4xl));">The Collection</h1>
+    </div>
+
+    <!-- Search bar (mobile top) -->
+    <div class="search-bar" role="search">
+      <svg class="search-icon" viewBox="0 0 24 24" aria-hidden="true">
+        <circle cx="11" cy="11" r="8"/>
+        <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+      </svg>
+      <input type="search" class="search-input" id="shop-search"
+             placeholder="Search objects, categories, materials…"
+             autocomplete="off" aria-label="Search products">
+    </div>
+
+    <div class="shop-layout">
+
+      <!-- SIDEBAR FILTERS -->
+      <aside class="sidebar" aria-label="Filters">
+
+        <div class="sidebar-section">
+          <div class="sidebar-title">Category</div>
+          <div role="group" aria-label="Category filters">
+            <div class="filter-option cat-filter active" data-cat="all" role="checkbox" aria-checked="true" tabindex="0">
+              <span>All Objects</span>
+              <div class="filter-check">
+                <svg viewBox="0 0 10 10" aria-hidden="true"><polyline points="2,5 4,7 8,3"/></svg>
+              </div>
+            </div>
+            <div class="filter-option cat-filter" data-cat="home" role="checkbox" aria-checked="false" tabindex="0">
+              <span>Home <span class="filter-count muted">(4)</span></span>
+              <div class="filter-check"><svg viewBox="0 0 10 10" aria-hidden="true"><polyline points="2,5 4,7 8,3"/></svg></div>
+            </div>
+            <div class="filter-option cat-filter" data-cat="kitchen" role="checkbox" aria-checked="false" tabindex="0">
+              <span>Kitchen <span class="filter-count muted">(3)</span></span>
+              <div class="filter-check"><svg viewBox="0 0 10 10" aria-hidden="true"><polyline points="2,5 4,7 8,3"/></svg></div>
+            </div>
+            <div class="filter-option cat-filter" data-cat="lighting" role="checkbox" aria-checked="false" tabindex="0">
+              <span>Lighting <span class="filter-count muted">(2)</span></span>
+              <div class="filter-check"><svg viewBox="0 0 10 10" aria-hidden="true"><polyline points="2,5 4,7 8,3"/></svg></div>
+            </div>
+            <div class="filter-option cat-filter" data-cat="fashion" role="checkbox" aria-checked="false" tabindex="0">
+              <span>Fashion <span class="filter-count muted">(2)</span></span>
+              <div class="filter-check"><svg viewBox="0 0 10 10" aria-hidden="true"><polyline points="2,5 4,7 8,3"/></svg></div>
+            </div>
+            <div class="filter-option cat-filter" data-cat="stationery" role="checkbox" aria-checked="false" tabindex="0">
+              <span>Stationery <span class="filter-count muted">(1)</span></span>
+              <div class="filter-check"><svg viewBox="0 0 10 10" aria-hidden="true"><polyline points="2,5 4,7 8,3"/></svg></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="sidebar-section">
+          <div class="sidebar-title">Price Range</div>
+          <div class="price-range-inputs">
+            <div>
+              <label for="price-min" class="form-label text-xs muted">Min $</label>
+              <input type="number" class="price-range-input" id="price-min" placeholder="0" min="0" max="999">
+            </div>
+            <div>
+              <label for="price-max" class="form-label text-xs muted">Max $</label>
+              <input type="number" class="price-range-input" id="price-max" placeholder="500" min="0" max="9999">
+            </div>
+          </div>
+        </div>
+
+        <div class="sidebar-section">
+          <div class="sidebar-title">Rating</div>
+          <div class="filter-option active">
+            <span>All ratings</span>
+          </div>
+          <div class="filter-option" style="cursor:pointer">
+            <span>4+ stars</span>
+            <div class="stars">${[1,2,3,4].map(() => '<svg class="star" width="11" height="11" viewBox="0 0 12 12"><polygon points="6,1 7.5,4.5 11,5 8.5,7.5 9.2,11 6,9.2 2.8,11 3.5,7.5 1,5 4.5,4.5" class="star-filled"/></svg>').join('')}+</div>
+          </div>
+        </div>
+
+      </aside>
+
+      <!-- MAIN CONTENT -->
+      <div>
+        <div class="shop-toolbar">
+          <span class="results-count" id="results-count">12 objects</span>
+          <select class="sort-select" id="sort-select" aria-label="Sort products">
+            <option value="featured">Featured</option>
+            <option value="newest">Newest</option>
+            <option value="price-asc">Price: Low to High</option>
+            <option value="price-desc">Price: High to Low</option>
+            <option value="rating">Top Rated</option>
+          </select>
+        </div>
+
+        <div class="shop-grid" id="shop-grid">
+          <!-- Rendered by JS -->
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================
+     PRODUCT DETAIL PAGE
+     ============================================================ -->
+<div id="page-product" class="page" role="main">
+  <!-- Rendered dynamically by JS -->
+</div>
+
+<!-- ============================================================
+     CART PAGE
+     ============================================================ -->
+<div id="page-cart" class="page" role="main">
+  <div class="container cart-page">
+    <h1 class="cart-title display">Your Cart</h1>
+    <div class="cart-layout">
+      <div class="cart-items">
+        <!-- Rendered by JS -->
+      </div>
+      <div class="cart-summary">
+        <div class="cart-summary-title">Order Summary</div>
+        <div class="summary-row">
+          <span>Subtotal</span>
+          <span class="summary-val summary-subtotal">$0</span>
+        </div>
+        <div class="summary-row">
+          <span>Shipping</span>
+          <span class="summary-val summary-shipping">$0</span>
+        </div>
+        <div class="coupon-row">
+          <input type="text" class="coupon-input" placeholder="Coupon code" aria-label="Coupon code">
+          <button class="btn btn-outline btn-sm">Apply</button>
+        </div>
+        <div class="summary-row total">
+          <span>Total</span>
+          <span class="summary-val summary-total">$0</span>
+        </div>
+        <button class="btn btn-primary w-full mt-6 btn-lg" id="checkout-btn">
+          Proceed to Checkout
+        </button>
+        <div class="cart-benefits">
+          <div class="cart-benefit">
+            <svg viewBox="0 0 24 24"><path d="M1 3h15l3 9H4z"/><circle cx="7" cy="20" r="2"/><circle cx="17" cy="20" r="2"/></svg>
+            Free shipping on orders over $150
+          </div>
+          <div class="cart-benefit">
+            <svg viewBox="0 0 24 24"><path d="M21 10H3M16 2l5 8-5 8M8 2L3 10l5 8"/></svg>
+            30-day hassle-free returns
+          </div>
+          <div class="cart-benefit">
+            <svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+            Secure, encrypted checkout
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================
+     CHECKOUT PAGE
+     ============================================================ -->
+<div id="page-checkout" class="page" role="main">
+  <div class="container checkout-page">
+    <h1 class="checkout-title display">Checkout</h1>
+    <div class="checkout-layout">
+
+      <!-- FORM -->
+      <div class="checkout-form" id="checkout-form-wrap">
+        <form id="checkout-form" novalidate>
+
+          <!-- Contact -->
+          <section aria-labelledby="contact-title">
+            <div class="form-section-title" id="contact-title">Contact Information</div>
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="ch-first">First Name</label>
+                <input class="form-input" id="ch-first" name="first" type="text"
+                       autocomplete="given-name" data-validate="required" required>
+                <span class="form-error" role="alert"></span>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="ch-last">Last Name</label>
+                <input class="form-input" id="ch-last" name="last" type="text"
+                       autocomplete="family-name" data-validate="required" required>
+                <span class="form-error" role="alert"></span>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="ch-email">Email Address</label>
+              <input class="form-input" id="ch-email" name="email" type="email"
+                     autocomplete="email" data-validate="email" required>
+              <span class="form-error" role="alert"></span>
+            </div>
+            <div class="form-group mt-4">
+              <label class="form-label" for="ch-phone">Phone (optional)</label>
+              <input class="form-input" id="ch-phone" name="phone" type="tel" autocomplete="tel">
+            </div>
+          </section>
+
+          <!-- Shipping -->
+          <section aria-labelledby="shipping-title">
+            <div class="form-section-title" id="shipping-title">Shipping Address</div>
+            <div class="form-group">
+              <label class="form-label" for="ch-address">Street Address</label>
+              <input class="form-input" id="ch-address" name="address" type="text"
+                     autocomplete="street-address" data-validate="required" required>
+              <span class="form-error" role="alert"></span>
+            </div>
+            <div class="form-group mt-4">
+              <label class="form-label" for="ch-apt">Apt, suite, etc. (optional)</label>
+              <input class="form-input" id="ch-apt" name="apt" type="text">
+            </div>
+            <div class="form-row three mt-4">
+              <div class="form-group">
+                <label class="form-label" for="ch-city">City</label>
+                <input class="form-input" id="ch-city" name="city" type="text"
+                       autocomplete="address-level2" data-validate="required" required>
+                <span class="form-error" role="alert"></span>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="ch-zip">Postal Code</label>
+                <input class="form-input" id="ch-zip" name="zip" type="text"
+                       autocomplete="postal-code" data-validate="zip" required>
+                <span class="form-error" role="alert"></span>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="ch-country">Country</label>
+                <select class="form-input" id="ch-country" name="country" autocomplete="country">
+                  <option value="">Select…</option>
+                  <option value="US">United States</option>
+                  <option value="GB">United Kingdom</option>
+                  <option value="CA">Canada</option>
+                  <option value="AU">Australia</option>
+                  <option value="DE">Germany</option>
+                  <option value="FR">France</option>
+                  <option value="SE">Sweden</option>
+                  <option value="JP">Japan</option>
+                </select>
+              </div>
+            </div>
+          </section>
+
+          <!-- Payment -->
+          <section aria-labelledby="payment-title">
+            <div class="form-section-title" id="payment-title">Payment Method</div>
+            <div class="payment-methods" role="radiogroup" aria-labelledby="payment-title">
+              <div class="payment-method selected" data-method="card" role="radio" aria-checked="true" tabindex="0">
+                <div class="payment-radio">
+                  <div class="payment-radio-dot"></div>
+                </div>
+                <span class="payment-label">Credit / Debit Card</span>
+                <div class="payment-icons">
+                  <span class="payment-icon-pill">VISA</span>
+                  <span class="payment-icon-pill">MC</span>
+                </div>
+              </div>
+              <div class="payment-method" data-method="paypal" role="radio" aria-checked="false" tabindex="0">
+                <div class="payment-radio">
+                  <div class="payment-radio-dot"></div>
+                </div>
+                <span class="payment-label">PayPal</span>
+                <div class="payment-icons"><span class="payment-icon-pill">PP</span></div>
+              </div>
+              <div class="payment-method" data-method="apple" role="radio" aria-checked="false" tabindex="0">
+                <div class="payment-radio">
+                  <div class="payment-radio-dot"></div>
+                </div>
+                <span class="payment-label">Apple Pay</span>
+              </div>
+            </div>
+
+            <!-- Card fields -->
+            <div class="card-fields visible">
+              <div class="form-group">
+                <label class="form-label" for="card-num">Card Number</label>
+                <input class="form-input" id="card-num" name="card" type="text"
+                       autocomplete="cc-number" placeholder="1234 5678 9012 3456"
+                       data-validate="card" maxlength="19" required>
+                <span class="form-error" role="alert"></span>
+              </div>
+              <div class="card-row">
+                <div class="form-group">
+                  <label class="form-label" for="card-exp">Expiry</label>
+                  <input class="form-input" id="card-exp" name="expiry" type="text"
+                         autocomplete="cc-exp" placeholder="MM/YY"
+                         data-validate="expiry" maxlength="5" required>
+                  <span class="form-error" role="alert"></span>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="card-cvv">CVV</label>
+                  <input class="form-input" id="card-cvv" name="cvv" type="text"
+                         autocomplete="cc-csc" placeholder="···"
+                         data-validate="cvv" maxlength="4" required>
+                  <span class="form-error" role="alert"></span>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="card-name">Name on Card</label>
+                <input class="form-input" id="card-name" name="cardname" type="text"
+                       autocomplete="cc-name" data-validate="required" required>
+                <span class="form-error" role="alert"></span>
+              </div>
+            </div>
+          </section>
+
+          <button type="submit" class="btn btn-gold btn-lg w-full">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="3" y="11" width="18" height="11" rx="2"/>
+              <path d="M7 11V7a5 5 0 0110 0v4"/>
+            </svg>
+            Place Order Securely
+          </button>
+
+        </form>
+      </div>
+
+      <!-- CHECKOUT SUMMARY PANEL -->
+      <aside class="checkout-summary" aria-label="Order summary">
+        <div class="checkout-summary-title">Your Order</div>
+        <div id="checkout-items">
+          <!-- Rendered by JS -->
+        </div>
+        <div style="margin-top:var(--space-5)">
+          <div class="summary-row">
+            <span>Subtotal</span>
+            <span class="summary-val" id="chk-subtotal">$0</span>
+          </div>
+          <div class="summary-row">
+            <span>Shipping</span>
+            <span class="summary-val" id="chk-shipping">$0</span>
+          </div>
+          <div class="summary-row total">
+            <span>Total</span>
+            <span class="summary-val" id="chk-total">$0</span>
+          </div>
+        </div>
+        <p style="font-size:var(--text-xs);color:rgba(245,240,232,0.35);margin-top:var(--space-4);line-height:1.6;">
+          By placing your order you agree to our Terms of Service and Privacy Policy.
+          Your data is encrypted and secure.
+        </p>
+      </aside>
+
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================
+     LOGIN PAGE
+     ============================================================ -->
+<div id="page-login" class="page" role="main">
+  <div class="auth-page">
+    <!-- Visual panel -->
+    <div class="auth-visual">
+      <img src="https://images.unsplash.com/photo-1507473885765-e6ed057f782c?w=900&q=80"
+           alt="Luxe objects" loading="lazy">
+      <div class="auth-visual-overlay">
+        <blockquote class="auth-visual-quote">
+          "The things you own should outlast the reasons you bought them."
+        </blockquote>
+        <p class="auth-visual-attr">— The Luxe Manifesto</p>
+      </div>
+    </div>
+
+    <!-- Form panel -->
+    <div class="auth-form-area">
+      <div class="auth-logo">LUXE<span>.</span></div>
+
+      <h1 class="auth-title">Welcome back</h1>
+      <p class="auth-subtitle">Sign in to your account to continue.</p>
+
+      <form class="auth-form" id="login-form" novalidate>
+        <div class="form-group">
+          <label class="form-label" for="login-email">Email</label>
+          <input class="form-input" id="login-email" name="email" type="email"
+                 autocomplete="email" placeholder="your@email.com" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="login-password">Password</label>
+          <input class="form-input" id="login-password" name="password" type="password"
+                 autocomplete="current-password" placeholder="••••••••" required>
+        </div>
+        <div style="display:flex;justify-content:flex-end;margin-top:calc(-1 * var(--space-2));">
+          <button type="button" class="auth-switch" style="text-align:right;margin:0;">
+            <button style="color:var(--gold);font-size:var(--text-xs);background:none;border:none;cursor:pointer;padding:0;">Forgot password?</button>
+          </button>
+        </div>
+        <button type="submit" class="btn btn-primary btn-lg w-full">Sign In</button>
+
+        <div class="auth-divider">or</div>
+
+        <button type="button" class="social-btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M15 8h-3a3 3 0 00-3 3v9M9 13h6"/>
+          </svg>
+          Continue with Google
+        </button>
+      </form>
+
+      <p class="auth-switch">
+        Don't have an account? <button onclick="Router.navigate('signup')">Create one</button>
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================
+     SIGNUP PAGE
+     ============================================================ -->
+<div id="page-signup" class="page" role="main">
+  <div class="auth-page">
+    <!-- Visual panel -->
+    <div class="auth-visual">
+      <img src="https://images.unsplash.com/photo-1612196808214-b8e1d6145a8c?w=900&q=80"
+           alt="Artisan ceramics" loading="lazy">
+      <div class="auth-visual-overlay">
+        <blockquote class="auth-visual-quote">
+          "Join a community that chooses slowly and intentionally."
+        </blockquote>
+        <p class="auth-visual-attr">— Luxe Members</p>
+      </div>
+    </div>
+
+    <!-- Form panel -->
+    <div class="auth-form-area">
+      <div class="auth-logo">LUXE<span>.</span></div>
+
+      <h1 class="auth-title">Create account</h1>
+      <p class="auth-subtitle">Join Luxe and discover objects worth keeping.</p>
+
+      <form class="auth-form" id="signup-form" novalidate>
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="su-first">First Name</label>
+            <input class="form-input" id="su-first" name="first" type="text" autocomplete="given-name" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="su-last">Last Name</label>
+            <input class="form-input" id="su-last" name="last" type="text" autocomplete="family-name" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="su-email">Email</label>
+          <input class="form-input" id="su-email" name="email" type="email"
+                 autocomplete="email" placeholder="your@email.com" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="su-password">Password</label>
+          <input class="form-input" id="su-password" name="password" type="password"
+                 autocomplete="new-password" placeholder="At least 8 characters" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="su-confirm">Confirm Password</label>
+          <input class="form-input" id="su-confirm" name="confirm" type="password"
+                 autocomplete="new-password" placeholder="••••••••" required>
+        </div>
+        <button type="submit" class="btn btn-primary btn-lg w-full">Create Account</button>
+
+        <div class="auth-divider">or</div>
+
+        <button type="button" class="social-btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M15 8h-3a3 3 0 00-3 3v9M9 13h6"/>
+          </svg>
+          Continue with Google
+        </button>
+      </form>
+
+      <p class="auth-switch">
+        Already have an account? <button onclick="Router.navigate('login')">Sign in</button>
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <!-- Brand -->
+      <div class="footer-brand">
+        <div class="footer-logo">LUXE<span>.</span></div>
+        <p class="footer-tagline">
+          We curate handcrafted objects made by people who care too much.
+          Each piece chosen to be used, worn, and passed down.
+        </p>
+        <div class="footer-socials" aria-label="Social media links">
+          <div class="social-icon" role="link" tabindex="0" aria-label="Instagram">
+            <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+          </div>
+          <div class="social-icon" role="link" tabindex="0" aria-label="Pinterest">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12c0 4.2 2.6 7.8 6.3 9.3-.1-.8-.1-2 .2-2.9.3-1 2.2-9.2 2.2-9.2s-.6-1.1-.6-2.8c0-2.6 1.5-4.6 3.8-4.6 1.8 0 2.6 1.3 2.6 2.9 0 1.8-1.1 4.5-1.7 7-.5 2.1 1 3.8 3 3.8 3.5 0 5.9-4.5 5.9-9.9 0-4.1-2.8-7.2-7.8-7.2-5.7 0-9.2 4.3-9.2 9.1 0 1.7.5 2.9 1.3 3.8.4.4.4.6.3 1.1-.1.3-.3 1.2-.4 1.5-.2.6-.6.8-1.1.6-2.3-1-3.4-3.7-3.4-6.7 0-5 3.9-10.8 11.7-10.8 6.3 0 10.4 4.6 10.4 9.5 0 6.4-3.6 11.2-8.8 11.2-1.8 0-3.4-.9-3.9-2l-1.1 4.2c-.4 1.4-1.3 3.1-1.9 4.2.7.2 1.5.3 2.3.3 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>
+          </div>
+          <div class="social-icon" role="link" tabindex="0" aria-label="Twitter / X">
+            <svg viewBox="0 0 24 24"><path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/></svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- Collection -->
+      <div>
+        <div class="footer-col-title">Collection</div>
+        <div class="footer-links">
+          <span class="footer-link" role="link" tabindex="0">Home</span>
+          <span class="footer-link" role="link" tabindex="0">Kitchen</span>
+          <span class="footer-link" role="link" tabindex="0">Lighting</span>
+          <span class="footer-link" role="link" tabindex="0">Fashion</span>
+          <span class="footer-link" role="link" tabindex="0">Stationery</span>
+          <span class="footer-link" role="link" tabindex="0">New Arrivals</span>
+        </div>
+      </div>
+
+      <!-- Company -->
+      <div>
+        <div class="footer-col-title">Company</div>
+        <div class="footer-links">
+          <span class="footer-link" role="link" tabindex="0">Our Story</span>
+          <span class="footer-link" role="link" tabindex="0">The Makers</span>
+          <span class="footer-link" role="link" tabindex="0">Sustainability</span>
+          <span class="footer-link" role="link" tabindex="0">Press</span>
+          <span class="footer-link" role="link" tabindex="0">Careers</span>
+        </div>
+      </div>
+
+      <!-- Help -->
+      <div>
+        <div class="footer-col-title">Help</div>
+        <div class="footer-links">
+          <span class="footer-link" role="link" tabindex="0">Shipping & Returns</span>
+          <span class="footer-link" role="link" tabindex="0">Care Guides</span>
+          <span class="footer-link" role="link" tabindex="0">Gift Cards</span>
+          <span class="footer-link" role="link" tabindex="0">Size Guide</span>
+          <span class="footer-link" role="link" tabindex="0">Contact Us</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2026 Luxe Store. All rights reserved.</p>
+      <div class="footer-legal">
+        <span class="footer-legal-link">Privacy Policy</span>
+        <span class="footer-legal-link">Terms of Service</span>
+        <span class="footer-legal-link">Cookie Settings</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ============================================================
+     SCRIPTS
+     ============================================================ -->
+<script src="js/products.js"></script>
+<script src="js/app.js"></script>
+<script>
+  // Additional event bindings that need DOM
+  document.addEventListener('DOMContentLoaded', () => {
+    // Nav logo click
+    document.querySelector('.nav-logo').addEventListener('click', () => Router.navigate('home'));
+
+    // Search icon in nav
+    document.querySelector('.nav-icon-btn[aria-label="Search"]').addEventListener('click', () => Router.navigate('shop'));
+
+    // Hero CTA buttons
+    document.querySelectorAll('[data-page]').forEach(btn => {
+      if (!btn.classList.contains('nav-link') && !btn.classList.contains('cat-filter')) {
+        btn.addEventListener('click', () => {
+          const page = btn.dataset.page;
+          if (page) Router.navigate(page);
+        });
+      }
+    });
+
+    // Checkout button from cart
+    document.getElementById('checkout-btn')?.addEventListener('click', () => {
+      if (State.cart.length === 0) { Toast.show('Your cart is empty', 'error'); return; }
+      Router.navigate('checkout');
+    });
+  });
+</script>
+
+</body>
+</html>
